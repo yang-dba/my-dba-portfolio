@@ -17,17 +17,28 @@
 
 ```
 my-dba-portfolio/
-├── infrastructure/           # 基础设施即代码
-│   ├── ansible/              # Ansible 自动化部署脚本
-│   └── terraform/            # Terraform 云资源管理配置
-├── monitoring/               # 监控与告警
-│   ├── dashboards/           # Grafana 监控大盘 JSON 配置
-│   └── alerts/               # Prometheus 告警规则
-├── scripts/                  # 运维脚本
-│   ├── backup/               # 备份脚本（mysqldump / Xtrabackup）
-│   └── maintenance/          # 日常维护脚本（日志清理、慢查询抓取等）
-├── runbook/                  # 运维操作手册（SOP）
-└── README.md                 # 项目说明
+├── infrastructure/               # 基础设施即代码
+│   ├── ansible/                  # Ansible 自动化部署脚本
+│   └── terraform/                # Terraform 云资源管理配置
+│
+├── monitoring/                   # 监控与告警
+│   ├── dashboards/               # Grafana 监控大盘 JSON 配置
+│   └── alerts/                   # Prometheus 告警规则
+│
+├── scripts/                      # 运维脚本
+│   ├── backup/				      # 备份脚本               
+│   │── recover/				  # 恢复脚本 
+│   └── maintenance/              # 维护脚本
+│
+├── runbook/                      # 运维操作手册（SOP）
+│   ├── 00-installation/          # 安装部署
+│   ├── 01-daily-checks/          # 日常巡检
+│   ├── 02-backup-recovery/       # 备份恢复
+│   ├── 03-incident-response/     # 故障应急
+│   ├── 04-performance/           # 性能优化
+│   └── 05-change-management/     # 变更管理
+│
+└── README.md                     # 项目说明
 ```
 
 ---
@@ -76,7 +87,7 @@ my-dba-portfolio/
 
 ## 📝 笔记与文档
 
-> 详细笔记已整理为 Markdown 格式，涵盖知识点、命令示例、踩坑记录和面试话术。
+> 详细笔记正在持续整理为 Markdown 格式，涵盖知识点、命令示例、踩坑记录。
 
 - GTID 主从复制搭建 SOP
 - Xtrabackup 全量/增量备份恢复 SOP
@@ -128,10 +139,8 @@ cat gtid_replication_sop.md
 
 ## 📬 联系与交流
 
-- GitHub：[mrhuangitseeker-jpg](https://github.com/mrhuangitseeker-jpg)
+- GitHub：[yang-dba](https://github.com/yang-dba)
 - 邮箱：[mrhuangitseeker@gmail.com]
 
 欢迎交流 DBA 学习经验与技术问题。
 ---
-
-**最后更新**：2026年6月
